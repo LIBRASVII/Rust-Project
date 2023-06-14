@@ -1,5 +1,6 @@
 #!allow[(dead_code)]
 
+
 fn divide(number_one: f32, number_two: f32) -> f32 {
     let result = number_one / number_two;
     println!("{} divide for {} is {}", number_one, number_two, result);
