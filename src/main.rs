@@ -1,5 +1,10 @@
 #!allow[(dead_code)]
 
+fn plus(number1: i32, number2: i32) -> i32 {
+    let result = number1 + number2;
+    println!("{} + {} is {}", number1, number2, result);
+    result
+}
 
 fn divide(number_one: f32, number_two: f32) -> f32 {
     let result = number_one / number_two;
@@ -69,4 +74,8 @@ fn main() {
     let result_divide = divide(some_number_float, some_other_number_float);
     divide(10.0, 3.);
     println!("{} divide for {} is {}", some_number_float, some_other_number_float, result_divide);
+
+    let number1 = 12;
+    let number2 = 43;
+    plus(number1, number2);
 }
