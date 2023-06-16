@@ -68,6 +68,7 @@ fn main() {
     let some_other_number = 3;
     multiply(some_number, some_other_number);
 
+    //take float variables to function and divide them
     let some_number_float: f32 = 35.;
     let some_other_number_float: f32 = 7.;
 
@@ -75,7 +76,17 @@ fn main() {
     divide(10.0, 3.);
     println!("{} divide for {} is {}", some_number_float, some_other_number_float, result_divide);
 
+    // given two number to function and calling it
     let number1 = 12;
     let number2 = 43;
     plus(number1, number2);
+
+    // code block that return a value
+    let my_number = {
+        let second_number = 10;
+        second_number + 9
+    };
+
+    println!("{}", my_number);
+
 }
