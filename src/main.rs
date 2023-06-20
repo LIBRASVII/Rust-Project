@@ -1,5 +1,18 @@
 #!allow[(dead_code)]
 
+// declare a string function
+fn another_string_function() {
+    let another_string_variable = "Blue?";
+    println!("another_string_function - {}", another_string_variable);
+    println!("{another_string_variable}")
+}
+
+// string function
+fn string_function() -> String {
+    let string_var = "Hello there".to_string();
+    string_var
+}
+
 // sum tow numbers
 fn plus(number1: i32, number2: i32) -> i32 {
     let result = number1 + number2;
@@ -20,23 +33,25 @@ fn multiply(number_one: i32, number_two: i32) {
     println!("{} times {} is = {}", number_one, number_two, result);
 }
 
+// return a interger
+// in this case - 5
 fn number() -> i32 {
     5
 }
 
+// multiply one number for two
 fn times_two(number: i32) -> i32 {
     number * 2
 }
-
 
 fn main() { 
 
     let final_number = {
         let y = 3;
-        let x = 6;
-        let x = times_two(x);
-        let x = x + y;
-        x
+        let x = 6; // 6
+        let x = times_two(x); // 12
+        let x = x + y; // 15
+        x // this return x: final_number
     };
     println!("The final_number is - {}", final_number);
 
@@ -65,7 +80,8 @@ fn main() {
     let count_char = "This ís about somewhere";
     println!("{}, {}", count_char.len(), count_char.chars().count());
     
-    println!("{}", std::mem::size_of::<char>());
+    // prints the size  of a char type
+    println!("Char size - {}", std::mem::size_of::<char>());
 
     let number1: i32 = 1_00000_0000;
     let number2 = 90_121______21___3___i32;
@@ -113,7 +129,6 @@ fn main() {
                                     // but we didn't return it!
                                     // the variable dies here 
     };
-
     println!("{:?}", my_another_number);
 
     let doesnt_print = ();
@@ -148,4 +163,9 @@ fn main() {
     }
     println!("Shadow_variable2 original - {}", shadow_variable2); // prints 20
 
+    // prints the string declared on the function
+    println!("string_function - {}", string_function()); 
+
+    // prints the string functiion
+    another_string_function();
 }
